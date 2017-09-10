@@ -60,17 +60,16 @@ public class Board {
 		_2_nextCell = new Cell();
 		((Cell2Way) _0_nextCell).setNextCells(_1_nextCell, _2_nextCell);
 		
-		for (int i = 0; i <= 1; i++) {
-			_1_tempCell = new Cell(i == 1);
-			_2_tempCell = new Cell(i == 1);
+		_1_tempCell = new Cell(true);
+		_2_tempCell = new Cell(true);
 			
-			_1_nextCell.setNextCell(_1_tempCell);
-			_2_nextCell.setNextCell(_2_tempCell);
+		_1_nextCell.setNextCell(_1_tempCell);
+		_2_nextCell.setNextCell(_2_tempCell);
 			
-			_1_nextCell = _1_tempCell;
-			_2_nextCell = _2_tempCell;
-		}
+		_1_nextCell = _1_tempCell;
+		_2_nextCell = _2_tempCell;
 		
 		// Classic board made
+		System.out.println("");
 	}
 }
