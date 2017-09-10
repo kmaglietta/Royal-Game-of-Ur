@@ -20,4 +20,21 @@ public class Cell2Way extends Cell {
 		set_1_nextCell(_1_nextCell);
 		set_2_nextCell(_2_nextCell);
 	}
+	
+	@Override
+	public void movePawn() {
+		try{
+			if(super.pawn.getPlayer() == 1) {
+				_1_nextCell.setPawn(pawn);
+				super.pawn = null;
+			}
+			else {
+				_2_nextCell.setPawn(pawn);
+				super.pawn = null;
+			}
+		}
+		catch (NullPointerException e) {
+			// If next cell is null (ie: End of the board)
+		}
+	}
 }

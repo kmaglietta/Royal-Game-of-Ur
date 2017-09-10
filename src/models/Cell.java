@@ -1,7 +1,7 @@
 package models;
 
 public class Cell {
-	private Pawn pawn;
+	protected Pawn pawn;
 	private Cell nextCell;
 	private boolean isRoset;
 	
@@ -40,6 +40,17 @@ public class Cell {
 
 	public void setNextCell(Cell nextCell) {
 		this.nextCell = nextCell;
+	}
+	
+	public void movePawn() {
+		try{
+			this.nextCell.setPawn(this.pawn);
+			this.pawn = null;
+		}
+		catch (NullPointerException e) {
+			// If next cell is null (ie: End of the board)
+		}
+		
 	}
 	
 	
