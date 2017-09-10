@@ -3,9 +3,27 @@ package models;
 public class Cell {
 	private Pawn pawn;
 	private Cell nextCell;
+	private boolean isRoset;
 	
-	public Cell (Cell nextCell) {
+	public Cell () {
+		//Create an empty cell
+	}
+	
+	public Cell (boolean isRoset) {
+		setRoset(isRoset);
+	}
+	
+	public Cell (Cell nextCell, boolean isRoset) {
 		setNextCell(nextCell);
+		setRoset(isRoset);
+	}
+
+	public boolean isRoset() {
+		return isRoset;
+	}
+
+	public void setRoset(boolean isRoset) {
+		this.isRoset = isRoset;
 	}
 
 	public Pawn getPawn() {

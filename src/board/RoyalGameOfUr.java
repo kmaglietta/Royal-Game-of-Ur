@@ -1,7 +1,9 @@
 package board;
 
-public class Game_Board {
+import models.Board;
+
+public class RoyalGameOfUr {
 	public static void main (String args[]){
-		System.out.println("THis is the board");
+		Board board = new Board();
 	}
 }
