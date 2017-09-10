@@ -3,7 +3,7 @@ package models;
 public class Cell {
 	protected Pawn pawn;
 	private Cell nextCell;
-	private boolean isRoset;
+	private boolean isRoset = false;
 	
 	public Cell () {
 		//Create an empty cell

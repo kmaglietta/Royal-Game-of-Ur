@@ -8,6 +8,10 @@ public class Cell2Way extends Cell {
 		
 	}
 	
+	public Cell2Way(boolean isRoset) {
+		super(isRoset);
+	}
+
 	public void set_1_nextCell(Cell _1_nextCell) {
 		this._1_nextCell = _1_nextCell;
 	}
